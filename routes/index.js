@@ -10,6 +10,7 @@ router.use('/barberos', require('./barberos'));
 router.use('/clientes', require('./clientes'));
 router.use('/citas', require('./citas'));
 router.use('/servicios', require('./servicios'));
-
+router.use('/barberias', require('./barberias'));
 // exportamos nuestro nuevo router
 module.exports = router;
+
