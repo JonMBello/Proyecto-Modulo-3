@@ -7,8 +7,8 @@ const {
     eliminarCita
 } = require('../controllers/citas')
 
-router.get('/', crearCita)
-router.post('/', obtenerCitas)
+router.get('/', obtenerCitas)
+router.post('/', crearCita)
 router.put('/:id', modificarCita)
 router.delete('/:id', eliminarCita)
 

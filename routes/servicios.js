@@ -7,8 +7,8 @@ const {
     eliminarServicio
 } = require('../controllers/servicios')
 
-router.get('/', crearServicio)
-router.post('/', obtenerServicios)
+router.get('/', obtenerServicios)
+router.post('/', crearServicio)
 router.put('/:id', modificarServicio)
 router.delete('/:id', eliminarServicio)
 
