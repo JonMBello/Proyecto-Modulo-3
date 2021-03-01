@@ -1,5 +1,5 @@
 class Cita {
-    constructor(id, numeroCita, cliente, barberia, servicios, fecha, hora) {
+    constructor({id, numeroCita, cliente, barberia, servicios, fecha, hora}) {
       this.id = id;
       this.numeroCita = numeroCita; 
       this.cliente = cliente; 
