@@ -7,11 +7,7 @@ router.get('/', (req, res)=>{
 });
 
 router.use('/barberos', require('./barberos'));
-
-/* con el método use de nuestro router estamos indicando 
-* que en la ruta 'v1/barberos' estarán anidadas las rutas 
-* que vamos a crear en nuestro archivo barberos.js,
-* la función require está importando este archivo */
+router.use('/clientes', require('./clientes'));
 
 // exportamos nuestro nuevo router
 module.exports = router;
