@@ -11,6 +11,20 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+/*********************** Mongoose Configuration *******************************/
+const mongoose = require("mongoose");
+
+mongoose.connect(
+    "mongodb+srv://barberiasUser:71pLi9XF4xWbe4Ri@cluster0.rcwkd.mongodb.net/barberias-api?retryWrites=true&w=majority"
+);
+
+mongoose.set("debug", true);
+
+require("./models/Cita");
+// Aquí se importarán los modelos restantes cuando estén listos
+
+/*********************** Mongoose Configuration *******************************/
+
 // Agregamos el código de nuestro router (routes/index.js)
 app.use('/v1', require('./routes'));
 

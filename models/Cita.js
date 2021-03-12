@@ -1,14 +1,36 @@
-class Cita {
-    constructor(id, numeroCita, cliente, barberia, servicios, fecha, hora) {
-      this.id = id;
-      this.numeroCita = numeroCita; 
-      this.cliente = cliente; 
-      this.barberia = barberia; 
-      this.servicios = servicios; 
-      this.fecha = fecha; 
-      this.hora = hora; 
-    }
-  
-}
-  
-module.exports = Cita;
+const mongoose = require('mongoose');//Importando mongoose.
+const uniqueValidator = require("mongoose-unique-validator");
+//Definiendo el objeto UsuarioSchema con el constructor Schema.
+//Definiendo cada campo con su respectivo tipo de dato.
+const CitaSchema = new mongoose.Schema({     
+  _id: {
+    Type: Number,
+    unique: true, //este campo no se puede repetir
+    required: [true, "no puede estar vacío"],
+    index: true,
+  },
+  numeroCita: {Type: Number, required: true},
+  cliente: {Type: Number, required: true},
+  barberia: {Type: Number, required: true}, 
+  servicios: {Type: Array, required: true},
+  fecha: {Type: Date, required: true},
+  hora: {Type: String, required: true}
+}, { timestamps: true });  
+
+//Define el modelo Usuario, utilizando el esquema UsuarioSchema.
+CitaSchema.plugin(uniqueValidator, { message: "Ya existe" }); 
+
+
+CitaSchema.methods.publicData = function(){
+  return {
+    id: this._id,
+    numeroCita: this.numeroCita,
+    cliente: this.cliente,
+    barberia: this.barberia,
+    servicios: this.servicios,
+    fecha: this.fecha,
+    hora: this.hora
+  };
+};
+
+mongoose.model("Cita", CitaSchema); //Colección en base de datos
