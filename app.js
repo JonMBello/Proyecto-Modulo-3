@@ -21,6 +21,7 @@ mongoose.connect(
 mongoose.set("debug", true);
 
 require("./models/Cita");
+require("./models/Barbero");
 // Aquí se importarán los modelos restantes cuando estén listos
 
 /*********************** Mongoose Configuration *******************************/
