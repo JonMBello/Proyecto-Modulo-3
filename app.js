@@ -21,6 +21,7 @@ mongoose.set("debug", true);
 require('./config/passport');
 require("./models/Cita");
 require("./models/Servicio");
+require("./models/Barbero");
 // Aquí se importarán los modelos restantes cuando estén listos
 
 /*********************** Mongoose Configuration *******************************/
