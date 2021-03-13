@@ -1,0 +1,502 @@
+[
+    {
+        "_id": 1000,
+        "nombre": "Neville Newman",
+        "telefono": "16270609 1770",
+        "correo": "lobortis.quam.a@Praesenteunulla.co.uk",
+        "genero": "H",
+        "usuario": "Brenden",
+        "clave": "AFM23QGN1OU"
+    },
+    {
+        "_id": 1001,
+        "nombre": "Kibo Witt",
+        "telefono": "16661101 9560",
+        "correo": "et.malesuada.fames@ipsum.com",
+        "genero": "M",
+        "usuario": "Mufutau",
+        "clave": "YCA08SOA4XU"
+    },
+    {
+        "_id": 1002,
+        "nombre": "Ryder Gentry",
+        "telefono": "16580211 8801",
+        "correo": "nisl.Nulla.eu@quis.org",
+        "genero": "M",
+        "usuario": "Benjamin",
+        "clave": "AUR74UHJ4OF"
+    },
+    {
+        "_id": 1003,
+        "nombre": "Kasimir Ellis",
+        "telefono": "16560324 3246",
+        "correo": "erat@ametconsectetueradipiscing.edu",
+        "genero": "M",
+        "usuario": "Keefe",
+        "clave": "ZPY05FDP8OO"
+    },
+    {
+        "_id": 1004,
+        "nombre": "Caldwell Watkins",
+        "telefono": "16160704 5901",
+        "correo": "metus@ProinmiAliquam.org",
+        "genero": "M",
+        "usuario": "Vaughan",
+        "clave": "JAR98LQT9PC"
+    },
+    {
+        "_id": 1005,
+        "nombre": "Driscoll Lloyd",
+        "telefono": "16630617 2518",
+        "correo": "massa.Integer@ipsum.org",
+        "genero": "H",
+        "usuario": "Harper",
+        "clave": "BYM53SCJ4LP"
+    },
+    {
+        "_id": 1006,
+        "nombre": "Steel Rogers",
+        "telefono": "16030811 2184",
+        "correo": "eget@metus.net",
+        "genero": "H",
+        "usuario": "Hyatt",
+        "clave": "LWQ97QIS5SJ"
+    },
+    {
+        "_id": 1007,
+        "nombre": "Fletcher Norton",
+        "telefono": "16300201 8269",
+        "correo": "Cras.convallis@magnaLoremipsum.net",
+        "genero": "M",
+        "usuario": "Drake",
+        "clave": "WDK17MAU1ZK"
+    },
+    {
+        "_id": 1008,
+        "nombre": "Bruno Cameron",
+        "telefono": "16110607 8601",
+        "correo": "eu@Sedmalesuada.net",
+        "genero": "M",
+        "usuario": "Elijah",
+        "clave": "PRZ33EOU0DE"
+    },
+    {
+        "_id": 1009,
+        "nombre": "Justin Bishop",
+        "telefono": "16260202 1087",
+        "correo": "pellentesque.a@et.net",
+        "genero": "H",
+        "usuario": "Eagan",
+        "clave": "IJZ54QZR6GM"
+    },
+    {
+        "_id": 1010,
+        "nombre": "Quamar Mejia",
+        "telefono": "16400318 7962",
+        "correo": "ut@sodales.com",
+        "genero": "H",
+        "usuario": "Chaney",
+        "clave": "CEV33IWJ4VJ"
+    },
+    {
+        "_id": 1011,
+        "nombre": "Ian Reese",
+        "telefono": "16631129 9058",
+        "correo": "magnis@Integer.net",
+        "genero": "H",
+        "usuario": "Isaac",
+        "clave": "VGP34NNF8VF"
+    },
+    {
+        "_id": 1012,
+        "nombre": "Wallace Foreman",
+        "telefono": "16651114 5366",
+        "correo": "diam.Duis@nequevenenatis.edu",
+        "genero": "M",
+        "usuario": "Christopher",
+        "clave": "RZH42KYK4OX"
+    },
+
+
+
+
+    
+    {
+        "_id":2000,
+        "nombre":"Jesus",
+        "telefono":"1231231231",
+        "correo":"prueba@mail.com",
+        "genero":"H",
+        "barberia":3000,
+        "usuario":"Jesus",
+        "clave":"J123"
+    },
+    {
+        "_id":2001,
+        "nombre":"Ulises",
+        "telefono":"967947393",
+        "correo":"uli@mail.com",
+        "genero":"H",
+        "barberia":3001,
+        "usuario":"Ulises",
+        "clave":"U123"
+    },
+    {
+        "_id":2002,
+        "nombre":"Andres",
+        "telefono":"9678432987",
+        "correo":"andres@mail.com",
+        "genero":"H",
+        "barberia":3002,
+        "usuario":"Andres",
+        "clave":"A123"
+    },
+    {
+        "_id":2003,
+        "nombre":"Cristiano",
+        "telefono":"9643232987",
+        "correo":"cristiano@mail.com",
+        "genero":"H",
+        "barberia":3003,
+        "usuario":"Cristiano",
+        "clave":"C123"
+    },
+    {
+        "_id":2004,
+        "nombre":"Gerard",
+        "telefono":"5555432987",
+        "correo":"gerard@mail.com",
+        "genero":"H",
+        "barberia":3004,
+        "usuario":"Gerard",
+        "clave":"G123"
+    },
+    {
+        "_id":2005,
+        "nombre":"Leo",
+        "telefono":"54445432987",
+        "correo":"leo@mail.com",
+        "genero":"H",
+        "barberia":3005,
+        "usuario":"Leo",
+        "clave":"L123"
+    },
+    {
+        "_id":2006,
+        "nombre":"Neymar",
+        "telefono":"33335432987",
+        "correo":"neymar@mail.com",
+        "genero":"H",
+        "barberia":3006,
+        "usuario":"Neymar",
+        "clave":"N123"
+    },
+    {
+        "_id":2007,
+        "nombre":"Ana",
+        "telefono":"52225432987",
+        "correo":"ana@mail.com",
+        "genero":"M",
+        "barberia":3007,
+        "usuario":"Ana",
+        "clave":"A123"
+    },
+    {
+        "_id":2008,
+        "nombre":"Enzo",
+        "telefono":"2255432987",
+        "correo":"enzo@mail.com",
+        "genero":"H",
+        "barberia":3008,
+        "usuario":"Enzo",
+        "clave":"E123"
+    },
+    {
+        "_id":2009,
+        "nombre":"Eric",
+        "telefono":"222413432987",
+        "correo":"eric@mail.com",
+        "genero":"H",
+        "barberia":3009,
+        "usuario":"Eric",
+        "clave":"E1123"
+    },
+    {
+        "_id":2010,
+        "nombre":"Eva",
+        "telefono":"2266432987",
+        "correo":"eva@mail.com",
+        "genero":"M",
+        "barberia":3010,
+        "usuario":"Eva",
+        "clave":"Eva123"
+    },
+    {
+        "_id":2011,
+        "nombre":"Hugo",
+        "telefono":"1255432987",
+        "correo":"hugo@mail.com",
+        "genero":"H",
+        "barberia":3011,
+        "usuario":"Hugo",
+        "clave":"H123"
+    },
+    {
+        "_id":2012,
+        "nombre":"Lara",
+        "telefono":"8855432987",
+        "correo":"lara@mail.com",
+        "genero":"M",
+        "barberia":3012,
+        "usuario":"Lara",
+        "clave":"L123"
+    },
+    
+
+
+
+    {
+        "_id": 3000,
+        "id_barbero_encargado": 2000,
+        "nombre_barberia": "Barberia Martinez",
+        "direccion_barberia":"AV. 20 DE NOVIEMBRE NO.1024",
+        "telefono_barberia":"52(547)195-15-49",   
+        "correo_barberia": "barberia.martinez@gmail.com",
+        "horario_barberia": "10 am - 8 pm",
+        "servicios": [5000, 5001, 5002, 5003]
+     },
+     {
+        "_id": 3001,
+        "id_barbero_encargado": 2001,
+        "nombre_barberia": "Barberia Vitela",
+        "direccion_barberia":"AV. 20 DE NOVIEMBRE NO. 1060",
+        "telefono_barberia":"91-(287 )- 53188",   
+        "correo_barberia": "barberia.vitela@gmail.com",
+        "horario_barberia": "10 am - 8 pm",
+        "servicios": [5002, 5003, 5001]
+     },
+     {
+        "_id": 3002,
+        "id_barbero_encargado": 2002,
+        "nombre_barberia": "Barberia Gutierrez",
+        "direccion_barberia":"AV. 5 DE MAYO NO 1100-A",
+        "telefono_barberia":"91-(287 )- 53188",   
+        "correo_barberia": "barberia.gutierrez@gmail.com",
+        "horario_barberia": "10 am - 6 pm",
+        "servicios": [5006, 5004, 5002]
+     },
+     {
+        "_id": 3003,
+        "id_barbero_encargado": 2003,
+        "nombre_barberia": "Barberia Vitela",
+        "direccion_barberia":"AV. INDEPENDENCIA N0.677",
+        "telefono_barberia":"91-(287)-5-22-36",   
+        "correo_barberia": "barberia.vitelaz@gmail.com",
+        "horario_barberia": "11 am - 6 pm",
+        "servicios": [5001, 5004, 5005]
+     },
+     {
+        "_id": 3004,
+        "id_barbero_encargado": 2004,
+        "nombre_barberia": "Barberia Castillejo",
+        "direccion_barberia":" CALLE ALDAMA NO.50",
+        "telefono_barberia":" 91-(287)53354",   
+        "correo_barberia": "barberia.castillejo@gmail.com",
+        "horario_barberia": "11 am - 6 pm",
+        "servicios": [5006, 5004, 5003]
+     },
+     {
+        "_id": 3005,
+        "id_barbero_encargado": 2005,
+        "nombre_barberia": "Barberia Garcia",
+        "direccion_barberia":" AV.LIBERTAD NO. 33",
+        "telefono_barberia":"  91-(287)-5-33-77",   
+        "correo_barberia": "barberia.garcia@gmail.com",
+        "horario_barberia": "11 am - 6 pm",
+        "servicios": [5004, 5005, 5001]
+     },
+     {
+        "_id": 3006,
+        "id_barbero_encargado": 2006,
+        "nombre_barberia": "Barberia Enrique",
+        "direccion_barberia":" CALLE HIDALGO NO.96",
+        "telefono_barberia":"  91-(287)5-05-78",   
+        "correo_barberia": "barberia.enrique@gmail.com",
+        "horario_barberia": "11 am - 6 pm",
+        "servicios": [5003, 5002, 5004]
+     },
+     {
+        "_id": 3007,
+        "id_barbero_encargado": 2007,
+        "nombre_barberia": "Barberia Flores",
+        "direccion_barberia":" BLVD. BENITO JUAREZ NO. 1291",
+        "telefono_barberia":"  91-(287)-5-07-32",   
+        "correo_barberia": "barberia.flores@gmail.com",
+        "horario_barberia": "11 am - 6 pm",
+        "servicios": [5004, 5002, 5003, 5006]
+     },
+     {
+        "_id": 3008,
+        "id_barbero_encargado": 2008,
+        "nombre_barberia": "Barberia Moreno",
+        "direccion_barberia":" AV. INDEPENDENCIA NO.117 ESQ.ARISTA",
+        "telefono_barberia":"  91 (287) 5-08-86",   
+        "correo_barberia": "barberia.moreno@gmail.com",
+        "horario_barberia": "11 am - 6 pm",
+        "servicios": [5003,5004,5005,5001]
+     },
+     {
+        "_id": 3009,
+        "id_barbero_encargado": 2009,
+        "nombre_barberia": "Barberia Hernandez",
+        "direccion_barberia":" AV. INDEPENDENCIA NO. 1162",
+        "telefono_barberia":"91-(287)-5-24-51",   
+        "correo_barberia": "barberia.hernandez@gmail.com",
+        "horario_barberia": "11 am - 5 pm",
+        "servicios": [5005,5004,5001,5003]
+     },
+     {
+        "_id": 3010,
+        "id_barbero_encargado": 2010,
+        "nombre_barberia": "Barberia Vera",
+        "direccion_barberia":" AV. 20 DE NOVIEMBRE NO 1225",
+        "telefono_barberia":"91287-153706",   
+        "correo_barberia": "barberia.vera@gmail.com",
+        "horario_barberia": "11 am - 5 pm",
+        "servicios": [5002,5003,5001,5004]
+     },
+     {
+        "_id": 3011,
+        "id_barbero_encargado": 2011,
+        "nombre_barberia": "Barberia Cruz",
+        "direccion_barberia":"  AV. LIBERTAD NO 387 ESQ. MORELOS",
+        "telefono_barberia":"91-(287)- 5-07-18",   
+        "correo_barberia": "barberia.vera@gmail.com",
+        "horario_barberia": "11 am - 7 pm",
+        "servicios": [5003,5004,5002,5001]
+     },
+     {
+        "_id": 3012,
+        "id_barbero_encargado": 2012,
+        "nombre_barberia": "Barberia Bravo",
+        "direccion_barberia":"AV. 5 DE MAYO NO 1911",
+        "telefono_barberia":"01 287 1 60 11",   
+        "correo_barberia": "barberia.bravoa@gmail.com",
+        "horario_barberia": "11 am - 9 pm",
+        "servicios": [5004,5006,5001]
+     },
+
+
+
+
+
+    {
+        "_id": "4000",
+        "numeroCita":1,
+        "cliente":1000,
+        "barberia":3000,
+        "servicios":[5000,5002],
+        "fecha": "14-12-2021",
+        "hora": "16:30"
+
+    },
+    {
+        "_id": "4001",
+        "numeroCita":2,
+        "cliente":1001,
+        "barberia":3001,
+        "servicios":[5001,5003],
+        "fecha": "11-08-2021",
+        "hora": "08:30"
+    },
+    {
+        "_id": "4002",
+        "numeroCita":3,
+        "cliente":1002,
+        "barberia":3002,
+        "servicios":[5006,5003],
+        "fecha": "14-12-2021",
+        "hora": "16:30"
+    },
+    {
+        "_id": "4003",
+        "numeroCita":4,
+        "cliente":1003,
+        "barberia":3003,
+        "servicios":[5005,5002],
+        "fecha": "14-12-2021",
+        "hora": "16:30"
+    },
+    {
+        "_id": "4004",
+        "numeroCita":1,
+        "cliente":1004,
+        "barberia":3004,
+        "servicios":[5001,5002,5003],
+        "fecha": "14-12-2021",
+        "hora": "16:30"
+    },
+    {
+        "_id": "4005",
+        "numeroCita":5,
+        "cliente":1005,
+        "barberia":3005,
+        "servicios":[5004],
+        "fecha": "14-12-2021",
+        "hora": "16:30"
+    },
+
+
+
+
+
+    {
+        "_id": "5000",
+        "nombre": "Corte caballero",
+        "descripcion":"Corte de cabello para caballero",
+        "precio": 100
+
+    },
+    {
+        "_id": "5001",
+        "nombre": "Corte dama",
+        "descripcion":"Corte de cabello para dama",
+        "precio": 150
+
+    },
+    {
+        "_id": "5002",
+        "nombre": "Corte de barba",
+        "descripcion":"Corte de barba",
+        "precio": 80
+
+    },
+    {
+        "_id": "5003",
+        "nombre": "Delinear cejas",
+        "descripcion":"Delineado de cejas",
+        "precio": 130
+
+    },
+    {
+        "_id": "5004",
+        "nombre": "Tinte",
+        "descripcion":"Tinte para el cabello",
+        "precio": 200
+
+    },
+    {
+        "_id": "5005",
+        "nombre": "Corte niño",
+        "descripcion":"Corte de cabello para niño",
+        "precio": 90
+
+    },
+    {
+        "_id": "5006",
+        "nombre": "Manicure express",
+        "descripcion":"Servicio de manicure express",
+        "precio": 160
+
+    }
+]
