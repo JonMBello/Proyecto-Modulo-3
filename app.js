@@ -27,3 +27,17 @@ app.use(function(req, res, next) {
 var server = app.listen(process.env.PORT || 3000, function(){
   console.log('Escuchando en el puerto ' + server.address().port);
 });
+
+/*********************** Mongoose Configuration *******************************/
+const mongoose = require("mongoose");
+
+mongoose.connect(
+    "mongodb+srv://<usuario>:<password>@cluster0-xmea4.mongodb.net/<dbname>?retryWrites=true&w=majority"
+);
+
+mongoose.set("debug", true);
+
+require("./models/Barberia");
+// Aquí se importarán los modelos Mascota y Solicitud cuando estén listos
+
+/*********************** Mongoose Configuration *******************************/
