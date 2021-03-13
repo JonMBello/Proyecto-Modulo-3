@@ -1,19 +1,3 @@
-// class Barbero {
-//     constructor(id, nombre, telefono, correo, genero, barberia, usuario, clave) {
-//       this.id = id;
-//       this.nombre = nombre; 
-//       this.telefono = telefono; 
-//       this.correo = correo; 
-//       this.genero = genero; 
-//       this.barberia = barberia;
-//       this.usuario = usuario; 
-//       this.clave = clave; 
-//     }
-  
-//   }
-  
-//   module.exports = Barbero;
-
 // Barbero.js
 const mongoose = require('mongoose');//Importando mongoose.
 const uniqueValidator = require("mongoose-unique-validator"); //Importando módulo mongoose-unique-validator
@@ -33,7 +17,7 @@ const BarberoSchema = new mongoose.Schema({
     match: [/\S+@\S+\.\S+/, "es inválido"],
     index: true,
   },
-  genero: {type: String, required: true}, 
+  genero: {type: String, required: true, enum: ['M', 'H', 'Otro']}, 
   barberia:{type: mongoose.Schema.Types.ObjectId, ref:"Barberia"},
   usuario: {                                                  
     type: String,
