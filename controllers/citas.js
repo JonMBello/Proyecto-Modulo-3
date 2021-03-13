@@ -1,9 +1,14 @@
-const Cita = require('../models/Cita');
+const mongoose = require("mongoose")
+const Cita = mongoose.model("Cita")
+const passport = require('passport');
 
 function crearCita(req, res) {
     // Instanciaremos una nueva Cita utilizando la clase Cita
-    var cita = new Cita(req.body);
-    res.status(201).send(cita);
+    var body = req.body;
+    const cita = new Cita(body);
+    cita.save().then(cita => {
+        res.status(201).send(cita)
+    }).catch(next)
 }
 
 function obtenerCitas(req, res) {

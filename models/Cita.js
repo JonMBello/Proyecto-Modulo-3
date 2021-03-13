@@ -5,7 +5,7 @@ const uniqueValidator = require("mongoose-unique-validator");
 const CitaSchema = new mongoose.Schema({     
   _id: {
     Type: Number,
-    unique: true, //este campo no se puede repetir
+    unique:true, //este campo no se puede repetir
     required: [true, "no puede estar vacío"],
     index: true,
   },
@@ -16,11 +16,7 @@ const CitaSchema = new mongoose.Schema({
   fecha: {Type: Date, required: true},
   hora: {Type: String, required: true}
 }, { timestamps: true });  
-
-//Define el modelo Usuario, utilizando el esquema UsuarioSchema.
 CitaSchema.plugin(uniqueValidator, { message: "Ya existe" }); 
-
-
 CitaSchema.methods.publicData = function(){
   return {
     id: this._id,
@@ -32,5 +28,5 @@ CitaSchema.methods.publicData = function(){
     hora: this.hora
   };
 };
-
+//Define el modelo Usuario, utilizando el esquema UsuarioSchema.
 mongoose.model("Cita", CitaSchema); //Colección en base de datos
