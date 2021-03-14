@@ -15,12 +15,13 @@ app.use(bodyParser.json());
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  "mongodb+srv://barberiasUser:<clave>@cluster0.rcwkd.mongodb.net/barberias-api?retryWrites=true&w=majority"
+  "mongodb+srv://barberiasUser:71pLi9XF4xWbe4Ri@cluster0.rcwkd.mongodb.net/barberias-api?retryWrites=true&w=majority"
 );
 mongoose.set("debug", true);
 
 //require("./models/Cita");
 //require("./models/Servicio");
+require("./models/Barberia")
 require("./models/Barbero");
 require('./config/passport');
 // Aquí se importarán los modelos restantes cuando estén listos
@@ -42,16 +43,3 @@ var server = app.listen(process.env.PORT || 3000, function(){
   console.log('Escuchando en el puerto ' + server.address().port);
 });
 
-/*********************** Mongoose Configuration *******************************/
-const mongoose = require("mongoose");
-
-mongoose.connect(
-    "mongodb+srv://<usuario>:<password>@cluster0-xmea4.mongodb.net/<dbname>?retryWrites=true&w=majority"
-);
-
-mongoose.set("debug", true);
-
-require("./models/Barberia");
-// Aquí se importarán los modelos Mascota y Solicitud cuando estén listos
-
-/*********************** Mongoose Configuration *******************************/

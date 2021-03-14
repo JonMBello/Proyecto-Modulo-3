@@ -34,35 +34,25 @@ function obtenerBarberias(req, res, next) {
 
 
 function modificarBarberia(req, res, next) {
-  console.log("Barberia a modificar: " + req.params.id ) //req.param.id - Mascota en uri
-
-  Barberia.findById(req.params.id).then(barberia => { //Busca la mascota que se recibe como parámetro.
-
-    if (!barberia) { return res.sendStatus(401); }   //Si no se encuentra mascota, retorna estaus 401.---
-
-    let idBarbero=req.barbero.id;                   //User en JWT
-    console.log("Barbero que modifica " + idBarbero);
-    if( idUsuario == idAnunciante ){
-      let nuevaInfo = req.body
-      if (typeof nuevaInfo.nombre !== 'undefined')
-        mascota.nombre = nuevaInfo.nombre
-      if (typeof nuevaInfo.categoria !== 'undefined')
-        mascota.categoria = nuevaInfo.categoria
-      if (typeof nuevaInfo.fotos !== 'undefined')
-        mascota.fotos = nuevaInfo.fotos
-      if (typeof nuevaInfo.descripcion !== 'undefined')
-        mascota.descripcion = nuevaInfo.descripcion
-      if (typeof nuevaInfo.anunciante !== 'undefined')
-        mascota.anunciante = nuevaInfo.anunciante
-      if (typeof nuevaInfo.ubicacion !== 'undefined')
-        mascota.ubicacion = nuevaInfo.ubicacion
-      mascota.save().then(updatedMascota => {
-        res.status(201).json(updatedMascota.publicData())
-      }).catch(next)
-    } 
-    else{
-      return res.sendStatus(401);
-    }
+  console.log(req.params.id)
+  Usuario.findById(req.params.id).then(barberia => {
+    if (!barberia) { return res.sendStatus(401); }
+    let nuevaInfo = req.body
+    if (typeof nuevaInfo.nombre !== 'undefined')
+      barberia.nombre = nuevaInfo.nombre
+    if (typeof nuevaInfo.direccion !== 'undefined')
+      barberia.direccion = nuevaInfo.direccion
+    if (typeof nuevaInfo.foto !== 'undefined')
+      barberia.telefono = nuevaInfo.telefono
+    if (typeof nuevaInfo.ubicacion !== 'undefined')
+      barberia.correo = nuevaInfo.correo
+    if (typeof nuevaInfo.telefono !== 'undefined')
+      barberia.horario = nuevaInfo.horario
+      if (typeof nuevaInfo.barberoEncargado !== 'undefined')
+      barberia.barberoEncargado = nuevaInfo.barberoEncargado
+    barberia.save().then(barberiaActualizada => {                                   //Guardando usuario modificado en MongoDB.
+      res.status(201).json(barberiaActualizada.publicData())
+    }).catch(next)
   }).catch(next)
 }
 
@@ -71,21 +61,14 @@ function modificarBarberia(req, res, next) {
   res.status(200).send(`Mascota ${req.params.id} eliminado`);
 }*/
 
-function eliminarBarberia(req, res) {
-  // únicamente borra a su propio mascota obteniendo el id del token
-  Barberia.findById(req.params.id).then(barberia => {
 
-    if (!barberia) { return res.sendStatus(401); }
-    
-    let idBarbero=req.barbero.id;
-    console.log("Barbero que modifica " + idBarbero);
-   
-    let nombreBarberia = barberia.nombre;
-    barberia.deleteOne();
-    res.status(200).send(`Barberia ${req.params.id} eliminada. ${nombreBarberia}`);
-    
-    
-  });
+  function eliminarBarberia(req, res) {
+    // únicamente borra a su propio usuario obteniendo el id del token
+    Usuario.findOneAndDelete({ _id: req.usuario.id }).then(r => {         //Buscando y eliminando usuario en MongoDB.
+      res.status(200).send(`Usuario ${req.params.id} eliminado: ${r}`);
+    })
+  }
+
   
   /*Mascota.findOneAndDelete({ _id: req.param.id }).then(r => {
       res.status(200).send(`Mascota ${req.params.id} eliminada: ${r}`);
@@ -98,5 +81,4 @@ module.exports = {
   obtenerBarberias,
   modificarBarberia,
   eliminarBarberia,
-  obtenerMascota
 }
