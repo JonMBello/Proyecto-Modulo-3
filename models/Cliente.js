@@ -87,5 +87,5 @@ ClienteSchema.methods.publicData = function(){
   };
 };
 
-//Define el modelo Barbero, utilizando el esquema BarberoSchema.
+//Define el modelo Cliente, utilizando el esquema ClienteSchema.
 mongoose.model("clientes", ClienteSchema);//Colección en base de datos
