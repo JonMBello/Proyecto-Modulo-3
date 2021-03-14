@@ -6,16 +6,32 @@ const uniqueValidator = require("mongoose-unique-validator");
 //Definiendo el objeto UsuarioSchema con el constructor Schema.
 //Definiendo cada campo con su respectivo tipo de dato.
 const BarberiaSchema = new mongoose.Schema({     
-  nombre: {Type: String, required: true},
-  direccion: {Type: String,required: true},
-  telefono: {Type: String,unique:true, required: true}, 
-  correo: {Type: String, unique:true,required: true},
+  nombre: {
+    type: String, 
+    required: true, 
+    index:true},
+  direccion: {
+    type: String,
+    required: true},
+  telefono: {
+    type: String,
+    unique:true, 
+    required: true}, 
+  correo: {
+    type: String, 
+    unique:true,
+    required: true},
   horario: {
-    inicio:{type:String, required:true},
-    cierre:{type:String, required:true},
-    required:true
+    inicio:{
+      type:String, 
+      required:true},
+    cierre:{
+      type:String, 
+      required:true},
   },
-  barberoEncargado: {type: mongoose.Schema.Types.ObjectId, ref: 'barberos'},
+  barberoEncargado: {
+    type: mongoose.Schema.Types.ObjectId, 
+    ref: 'barberos'},
 }, { timestamps: true });  
 
 //Define el modelo Usuario, utilizando el esquema UsuarioSchema.
