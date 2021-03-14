@@ -8,7 +8,7 @@ function crearCliente(req, res, next) {
   delete body.password;
   const cliente = new Cliente(body)
   cliente.crearPassword(password)
-  cliente.save().then(user => {                                         //Guardando nuevo usuario en MongoDB.
+  cliente.save().then(user => {
     return res.status(201).json(user.toAuthJSON())
   }).catch(next)
 }
