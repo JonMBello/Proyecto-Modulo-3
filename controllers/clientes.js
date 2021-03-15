@@ -35,6 +35,59 @@ function modificarCliente(req, res,next) {
   })
 }
 
+function obtenerClientePorLimite(req, res, next){
+  let limite = req.params.limit;
+  limite = Number(limite)
+  Cliente.find({}).limit(limite).then(cliente => {
+    res.send(cliente)
+  }).catch(next)
+}
+
+function obtenerClientesPorCampos(req, res, next){
+  let datos = '';
+  for(const dato in req.query){
+    if(Object.hasOwnProperty.call(req.query, dato)){
+      datos = datos + ' ' + req.query[dato];
+    }
+  }
+  Cliente.find({}, datos).then(cliente =>{
+    res.send(cliente)
+  }).catch(next)
+}
+
+function obtenerClientesPorAtributo(req,res,next){
+  if(req.query.nombre){
+    Cliente.find({nombre: req.query.nombre}).then(cliente =>{
+      res.send(cliente)
+    }).catch(next)
+  }
+  if(req.query.telefono){
+    Cliente.find({telefono: req.query.telefono}).then(cliente =>{
+      res.send(cliente)
+    }).catch(next)
+  }
+  if(req.query.correo){
+    Cliente.find({correo: req.query.correo}).then(cliente =>{
+      res.send(cliente)
+    }).catch(next)
+  }
+  if(req.query.genero){
+    Cliente.find({genero: req.query.genero}).then(cliente =>{
+      res.send(cliente)
+    }).catch(next)
+  }
+  if(req.query.barberia){
+    Cliente.find({barberia: req.query.barberia}).then(cliente =>{
+      res.send(cliente)
+    }).catch(next)
+  }
+  if(req.query.usuario){
+    Cliente.find({usuario: req.query.usuario}).then(cliente =>{
+      res.send(cliente)
+    }).catch(next)
+  }
+}
+
 function eliminarCliente(req, res, next) {
   Cliente.findOneAndDelete({_id: req.params.id}).then(r => {
     res.status(200).send(`Cliente ${req.params.id} eliminado ${r.usuario}`);
@@ -65,6 +118,9 @@ function iniciarSesion(req, res, next) {
 module.exports = {
   crearCliente,
   obtenerClientes,
+  obtenerClientePorLimite,
+  obtenerClientesPorCampos,
+  obtenerClientesPorAtributo,
   modificarCliente,
   eliminarCliente,
   iniciarSesion
