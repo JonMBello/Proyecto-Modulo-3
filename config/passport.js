@@ -15,13 +15,13 @@ passport.use(new LocalStrategy({                            //Configurando eleme
           return done(null, false, { errors: { 'email o contraseña': 'equivocado(a)' } });
         }
         else{
-          return done(null, false, { done: { 'Cliente': 'Logueado' } });
+          return done(null, user);
         }        
         //Agregar la verificación de cliente
       })
     }
     else{
-      return done(null, false, { done: { 'Barbero': 'Logueado' } });
+      return done(null, user);
     }    
     //Agregar la verificación de cliente
   }).catch(done);
