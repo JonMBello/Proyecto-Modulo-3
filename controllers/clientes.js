@@ -14,13 +14,16 @@ function crearCliente(req, res, next) {
 }
 
 function obtenerClientes(req, res, next) {
-  console.log(req);
-  Cliente.findById(req.usuario.id, (err, user) => {
-    if (!user || err) {
-      return res.sendStatus(401)
-    }
-    return res.json(user.publicData());
-  }).catch(next);
+  if(req.params.id){
+    Cliente.findById(req.params.id).then(cliente => {
+	      res.send(cliente)
+	    }).catch(next)
+      
+  } else {
+    Cliente.find().then(cliente=>{
+      res.send(cliente)
+    }).catch(next)
+  }
 }
 
 // function modificarCliente(req, res) {
