@@ -7,13 +7,15 @@
 
 - 2.Definan los requerimientos del proyecto, así como su estructura, es decir, respondanlas preguntas:
 
-	o	¿Qué espero que haga el proyecto?
-			1.	Crear, consultar, modificar y eliminar clientes.
-			2.	Crear, consultar, modificar y eliminar barberos.
-			3.	Crear, consultar, modificar y eliminar barberías.
-			4.	Crear, consultar, modificar y eliminar servicios.
-			5.	Crear, consultar, modificar y eliminar citas
+		o	¿Qué espero que haga el proyecto?
 
+		1.	Crear, consultar, modificar y eliminar clientes.
+		2.	Crear, consultar, modificar y eliminar barberos.
+		3.	Crear, consultar, modificar y eliminar barberías.
+		4.	Crear, consultar, modificar y eliminar servicios.
+		5.	Crear, consultar, modificar y eliminar citas
+	
+	
 	o	¿Qué tipos de usuario tendrá nuestro sistema?
 		1.	Clientes
 		2.	Barberos
@@ -24,6 +26,8 @@
 			2.	Crear, consultar, modificar y eliminar sus citas.
 			3.	Consultar barberías.
 			4.	Consultar servicios
+		
+		
 
 		1.	Barberos:
 			1.	Crear, consultar, modificar y eliminar sus datos.
