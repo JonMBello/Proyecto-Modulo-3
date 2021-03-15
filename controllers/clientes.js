@@ -30,22 +30,15 @@ function modificarCliente(req, res,next) {
     if (err) {
       res.sendStatus(401)
       } else {
-        res.status(200)
+        res.status(200).json(postActualizado)
       }
   })
 }
 
-function eliminarCliente(req, res) {
-  const cliente = Cliente.findById(req.params.id);
-  if (cliente === null){
-    res.sendStatus(401)
-  } else {
-    Cliente.remove(cliente).then(user => {
-      res.status(200)
-    }).catch(err => {
-      res.sendStatus(500)
-    }).catch(next)
-  }
+function eliminarCliente(req, res, next) {
+  Cliente.findOneAndDelete({_id: req.params.id}).then(r => {
+    res.status(200).send(`Cliente ${req.params.id} eliminado ${r.usuario}`);
+  })
 }
 
 module.exports = {
