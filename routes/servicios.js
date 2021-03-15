@@ -5,11 +5,12 @@ const {
     obtenerServicios,
     modificarServicio,
     eliminarServicio
-} = require('../controllers/servicios')
+} = require('../controllers/servicios');
+const auth = require('./auth');
 
-router.get('/', obtenerServicios)
-router.post('/', crearServicio)
-router.put('/:id', modificarServicio)
-router.delete('/:id', eliminarServicio)
+router.get('/', auth.opcional, obtenerServicios)
+router.post('/', auth.requerido, crearServicio)
+router.put('/:id', auth.requerido, modificarServicio)
+router.delete('/:id', auth.requerido, eliminarServicio)
 
 module.exports = router;

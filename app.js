@@ -15,12 +15,12 @@ app.use(bodyParser.json());
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  "mongodb+srv://barberiasUser:<clave>@cluster0.rcwkd.mongodb.net/barberias-api?retryWrites=true&w=majority"
+  "mongodb+srv://barberiasUser:71pLi9XF4xWbe4Ri@cluster0.rcwkd.mongodb.net/barberias-api?retryWrites=true&w=majority"
 );
 mongoose.set("debug", true);
 
-//require("./models/Cita");
-//require("./models/Servicio");
+require("./models/Cita");
+require("./models/Servicio");
 require("./models/Barbero");
 require('./config/passport');
 // Aquí se importarán los modelos restantes cuando estén listos

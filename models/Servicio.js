@@ -4,16 +4,10 @@ const uniqueValidator = require("mongoose-unique-validator");
 //Definiendo el objeto ServicioSchema con el constructor Schema.
 //Definiendo cada campo con su respectivo tipo de dato.
 const ServicioSchema = new mongoose.Schema({     
-  _id: {
-    Type: Number,
-    unique: true, //este campo no se puede repetir
-    required: [true, "no puede estar vacío"],
-    index: true,
-  },
-  nombre: {Type: String, required: true},
-  descripcion: {Type: String},
-  precio: {Type: Number, required: true},
-  barberia: {}
+  nombre:{type: String, required: true},
+  descripcion:{type: String, required: true},
+  barberia:{type: mongoose.Schema.Types.ObjectId, ref:"Barberia"},
+  precio:{type: Number, required: true}
 }, { timestamps: true });  
 ServicioSchema.plugin(uniqueValidator, { message: "Ya existe" }); 
 ServicioSchema.methods.publicData = function(){

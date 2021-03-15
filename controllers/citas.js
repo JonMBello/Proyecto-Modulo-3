@@ -1,34 +1,52 @@
-const mongoose = require("mongoose")
-const Cita = mongoose.model("Cita")
-const passport = require('passport');
+const mongoose = require("mongoose");
+const Cita = mongoose.model("Cita");
 
-function crearCita(req, res) {
-    // Instanciaremos una nueva Cita utilizando la clase Cita
-    var body = req.body;
-    const cita = new Cita(body);
+function crearCita(req, res, next) {
+    // Instanciaremos un nuevo Cita utilizando la clase Cita
+    var cita = new Cita(req.body)
     cita.save().then(cita => {
         res.status(201).send(cita)
     }).catch(next)
 }
 
-function obtenerCitas(req, res) {
-    // Simulando dos citas y respondiendolas
-    var cita1 = new Cita(1, 1, 101, 105, 1, '14-12-2021', '12:00');
-    var cita2 = new Cita(2, 1, 102, 125, 2, '11-08-2021', '14:00');
-    res.send([cita1, cita2]);
+function obtenerCitas(req, res, next) {
+    if(req.params.id){
+        Cita.findById(req.params.id).then(cita => {
+            res.send(cita)
+        }).catch(next)
+    } else {
+        Cita.find().then(cita=>{
+          res.send(cita)
+        }).catch(next)
+    }
 }
 
-function modificarCita(req, res) {
-    // Simulando una cita previamente existente que el cliente modifica
-    var cita1 = new Cita(req.params.id, 1, 101, 105, 1, '14-12-2021', '12:00');
-    var modificaciones = req.body;
-    cita1 = { ...cita1, ...modificaciones };
-    res.send(cita1);
+function modificarCita(req, res, next) {
+    Cita.findById(req.params.id).then(cita => {
+        if (!cita) { return res.sendStatus(401); }
+        let nuevaInfo = req.body
+        if (typeof nuevaInfo.numeroCita !== 'undefined')
+          cita.numeroCita = nuevaInfo.numeroCita
+        if (typeof nuevaInfo.cliente !== 'undefined')
+          cita.cliente = nuevaInfo.cliente
+        if (typeof nuevaInfo.barberia !== 'undefined')
+          cita.barberia = nuevaInfo.barberia
+        if (typeof nuevaInfo.servicios !== 'undefined')
+          cita.servicios = nuevaInfo.servicios
+        if (typeof nuevaInfo.fecha !== 'undefined')
+          cita.fecha = nuevaInfo.fecha
+        if (typeof nuevaInfo.hora !== 'undefined')
+          cita.hora = nuevaInfo.hora
+        cita.save().then(updatedCita => { //Guardando cita modificado en MongoDB.
+          res.status(201).json(updatedCita.publicData())
+        }).catch(next)
+      }).catch(next)
 }
 
 function eliminarCita(req, res) {
-    // se simula una eliminación de cita, regresando un 200
-    res.status(200).send(`Cita ${req.params.id} eliminado`);
+    Cita.findOneAndDelete({ _id: req.params.id }).then(s => {//Buscando y eliminando cita en MongoDB.
+        res.status(200).send(`Cita ${req.params.id} eliminado.`);
+    })
 }
 
 // exportamos las funciones definidas

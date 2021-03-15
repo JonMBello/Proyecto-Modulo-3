@@ -5,11 +5,12 @@ const {
     obtenerCitas,
     modificarCita,
     eliminarCita
-} = require('../controllers/citas')
+} = require('../controllers/citas');
+const auth = require('./auth');
 
-router.get('/',obtenerCitas)
-router.post('/', crearCita)
-router.put('/:id', modificarCita)
-router.delete('/:id', eliminarCita)
+router.get('/', auth.requerido, obtenerCitas)
+router.post('/', auth.requerido, crearCita)
+router.put('/:id', auth.requerido, modificarCita)
+router.delete('/:id', auth.requerido, eliminarCita)
 
 module.exports = router;
