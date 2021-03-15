@@ -25,6 +25,59 @@ function obtenerBarberos(req, res, next) {
   }).catch(next);
 }
 
+function obtenerBarberoPorLimite(req, res, next){
+  let limite = req.params.limit;
+  limite = Number(limite)
+  Barbero.find({}).limit(limite).then(barbero => {
+    res.send(barbero)
+  }).catch(next)
+}
+
+function obtenerBarberosPorCampos(req, res, next){
+  let datos = '';
+  for(const dato in req.query){
+    if(Object.hasOwnProperty.call(req.query, dato)){
+      datos = datos + ' ' + req.query[dato];
+    }
+  }
+  Barbero.find({}, datos).then(barbero =>{
+    res.send(barbero)
+  }).catch(next)
+}
+
+function obtenerBarberosPorAtributo(req,res,next){
+  if(req.query.nombre){
+    Barbero.find({nombre: req.query.nombre}).then(barbero =>{
+      res.send(barbero)
+    }).catch(next)
+  }
+  if(req.query.telefono){
+    Barbero.find({telefono: req.query.telefono}).then(barbero =>{
+      res.send(barbero)
+    }).catch(next)
+  }
+  if(req.query.correo){
+    Barbero.find({correo: req.query.correo}).then(barbero =>{
+      res.send(barbero)
+    }).catch(next)
+  }
+  if(req.query.genero){
+    Barbero.find({genero: req.query.genero}).then(barbero =>{
+      res.send(barbero)
+    }).catch(next)
+  }
+  if(req.query.barberia){
+    Barbero.find({barberia: req.query.barberia}).then(barbero =>{
+      res.send(barbero)
+    }).catch(next)
+  }
+  if(req.query.usuario){
+    Barbero.find({usuario: req.query.usuario}).then(barbero =>{
+      res.send(barbero)
+    }).catch(next)
+  }
+}
+
 function modificarBarbero(req, res, next) {
   console.log(req.usuario)
   Barbero.findById(req.usuario.id).then(user => {
@@ -82,14 +135,10 @@ function iniciarSesion(req, res, next) {
 module.exports = {
   crearBarbero,
   obtenerBarberos,
+  obtenerBarberoPorLimite,
+  obtenerBarberosPorCampos,
+  obtenerBarberosPorAtributo,
   modificarBarbero,
   eliminarBarbero,
   iniciarSesion
 }
-
-//Terminar controladores
-//Login (Login de barberos)
-//Exportar las funciones
-//Routes/barberos Activar las rutas
-//Routes/index Activar todas las rutas
-//Archivo app.js Agregar los modelos

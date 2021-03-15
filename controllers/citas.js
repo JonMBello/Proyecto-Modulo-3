@@ -21,6 +21,59 @@ function obtenerCitas(req, res, next) {
     }
 }
 
+function obtenerServicioPorLimite(req, res, next){
+  let limite = req.params.limit;
+  limite = Number(limite)
+  Servicio.find({}).limit(limite).then(barbero => {
+    res.send(barbero)
+  }).catch(next)
+}
+
+function obtenerServiciosPorCampos(req, res, next){
+  let datos = '';
+  for(const dato in req.query){
+    if(Object.hasOwnProperty.call(req.query, dato)){
+      datos = datos + ' ' + req.query[dato];
+    }
+  }
+  Servicio.find({}, datos).then(barbero =>{
+    res.send(barbero)
+  }).catch(next)
+}
+
+function obtenerServiciosPorAtributo(req,res,next){
+  if(req.query.numeroCita){
+    Servicio.find({numeroCita: req.query.numeroCita}).then(barbero =>{
+      res.send(barbero)
+    }).catch(next)
+  }
+  if(req.query.cliente){
+    Servicio.find({cliente: req.query.cliente}).then(barbero =>{
+      res.send(barbero)
+    }).catch(next)
+  }
+  if(req.query.barberia){
+    Servicio.find({barberia: req.query.barberia}).then(barbero =>{
+      res.send(barbero)
+    }).catch(next)
+  }
+  if(req.query.servicios){
+    Servicio.find({servicios: req.query.servicios}).then(barbero =>{
+      res.send(barbero)
+    }).catch(next)
+  }
+  if(req.query.fecha){
+    Servicio.find({fecha: req.query.fecha}).then(barbero =>{
+      res.send(barbero)
+    }).catch(next)
+  }
+  if(req.query.hora){
+    Servicio.find({hora: req.query.hora}).then(barbero =>{
+      res.send(barbero)
+    }).catch(next)
+  }
+}
+
 function modificarCita(req, res, next) {
     Cita.findById(req.params.id).then(cita => {
         if (!cita) { return res.sendStatus(401); }
@@ -53,6 +106,9 @@ function eliminarCita(req, res) {
 module.exports = {
     crearCita,
     obtenerCitas,
+    obtenerServicioPorLimite,
+    obtenerServiciosPorCampos,
+    obtenerServiciosPorAtributo,
     modificarCita,
     eliminarCita
 }

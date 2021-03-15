@@ -45,34 +45,34 @@ function obtenerBarberiasPorCampos(req, res, next){
 }
 
 function obtenerBarberiasPorAtributo(req,res,next){
-  if(req.params.nombre){
-    Barberia.find({nombre: req.params.nombre}).then(barberia =>{
+  if(req.query.nombre){
+    Barberia.find({nombre: req.query.nombre}).then(barberia =>{
       res.send(barberia)
     }).catch(next)
   }
-  if(req.params.direccion){
-    Barberia.find({direccion: req.params.direccion}).then(barberia =>{
+  if(req.query.direccion){
+    Barberia.find({direccion: req.query.direccion}).then(barberia =>{
       res.send(barberia)
     }).catch(next)
   }
-  if(req.params.telefono){
-    console.log(req.params.telefono)
+  if(req.query.telefono){
+    console.log(req.query.telefono)
     Barberia.find({telefono: req.body.telefono}).then(barberia =>{
       res.send(barberia)
     }).catch(next)
   }
-  if(req.params.correo){
-    Barberia.find({correo: req.params.correo}).then(barberia =>{
+  if(req.query.correo){
+    Barberia.find({correo: req.query.correo}).then(barberia =>{
       res.send(barberia)
     }).catch(next)
   }
-  if(req.params.horario){
-    Barberia.find({horario: req.params.horario}).then(barberia =>{
+  if(req.query.horario){
+    Barberia.find({horario: req.query.horario}).then(barberia =>{
       res.send(barberia)
     }).catch(next)
   }
-  if(req.params.barberoEncargado){
-    Barberia.find({horario: req.params.barberoEncargado}).then(barberia =>{
+  if(req.query.barberoEncargado){
+    Barberia.find({horario: req.query.barberoEncargado}).then(barberia =>{
       res.send(barberia)
     }).catch(next)
   }

@@ -21,6 +21,50 @@ function obtenerServicios(req, res, next) {
     }
 }
 
+function obtenerServicioPorLimite(req, res, next){
+  let limite = req.params.limit;
+  limite = Number(limite)
+  Servicio.find({}).limit(limite).then(servicio => {
+    res.send(servicio)
+  }).catch(next)
+}
+
+function obtenerServiciosPorCampos(req, res, next){
+  let datos = '';
+  for(const dato in req.query){
+    if(Object.hasOwnProperty.call(req.query, dato)){
+      datos = datos + ' ' + req.query[dato];
+    }
+  }
+  Servicio.find({}, datos).then(servicio =>{
+    res.send(servicio)
+  }).catch(next)
+}
+
+function obtenerServiciosPorAtributo(req,res,next){
+  if(req.query.nombre){
+    Servicio.find({nombre: req.query.nombre}).then(servicio =>{
+      res.send(servicio)
+    }).catch(next)
+  }
+  if(req.query.descripcion){
+    Servicio.find({descripcion: req.query.descripcion}).then(servicio =>{
+      res.send(servicio)
+    }).catch(next)
+  }
+  if(req.query.barberia){
+    console.log(req.params.telefono)
+    Servicio.find({barberia: req.query.barberia}).then(servicio =>{
+      res.send(servicio)
+    }).catch(next)
+  }
+  if(req.query.precio){
+    Servicio.find({precio: req.query.precio}).then(servicio =>{
+      res.send(servicio)
+    }).catch(next)
+  }
+}
+
 function modificarServicio(req, res, next) {
     Servicio.findById(req.params.id).then(servicio => {
         if (!servicio) { return res.sendStatus(401); }
@@ -49,6 +93,9 @@ function eliminarServicio(req, res) {
 module.exports = {
     crearServicio,
     obtenerServicios,
+    obtenerServicioPorLimite,
+    obtenerServiciosPorCampos,
+    obtenerServiciosPorAtributo,
     modificarServicio,
     eliminarServicio
 }
