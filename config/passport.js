@@ -7,7 +7,7 @@ passport.use(new LocalStrategy({                            //Configurando eleme
   usernameField: 'email',
   passwordField: 'password'
 }, function (email, password, done) {
-  Barbero.findOne({ email: email }).then(function (user) {
+  Barbero.findOne({ correo: email }).then(function (user) {
     if (!user || !user.validarPassword(password)) {
       return done(null, false, { errors: { 'email o contraseña': 'equivocado(a)' } });
     }
