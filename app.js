@@ -25,6 +25,7 @@ require("./models/Cita");
 require("./models/Servicio");
 require("./models/Barberia")
 require("./models/Barbero");
+require("./models/Cliente");
 require('./config/passport');
 // Aquí se importarán los modelos restantes cuando estén listos
 
