@@ -7,7 +7,7 @@
 
 - 2.Definan los requerimientos del proyecto, así como su estructura, es decir, respondanlas preguntas:
 
-		o	¿Qué espero que haga el proyecto?
+	o	¿Qué espero que haga el proyecto?
 
 		1.	Crear, consultar, modificar y eliminar clientes.
 		2.	Crear, consultar, modificar y eliminar barberos.
@@ -17,25 +17,29 @@
 	
 	
 	o	¿Qué tipos de usuario tendrá nuestro sistema?
+	
 		1.	Clientes
 		2.	Barberos
 
 	o	¿Qué acciones puede realizar cada usuario?
+		
 		1.	Clientes:
-			1.	Crear, consultar, modificar y eliminar sus datos.
-			2.	Crear, consultar, modificar y eliminar sus citas.
-			3.	Consultar barberías.
-			4.	Consultar servicios
+		1.	Crear, consultar, modificar y eliminar sus datos.
+		2.	Crear, consultar, modificar y eliminar sus citas.
+		3.	Consultar barberías.
+		4.	Consultar servicios
 		
 		
 
 		1.	Barberos:
-			1.	Crear, consultar, modificar y eliminar sus datos.
-			2.	Crear, consultar, modificar y eliminar sus citas.
-			3.	Consultar barberías.
-			4.	Consultar servicios
+			
+		1.	Crear, consultar, modificar y eliminar sus datos.
+		2.	Crear, consultar, modificar y eliminar sus citas.
+		3.	Consultar barberías.
+		4.	Consultar servicios
 
 	o	¿Qué información se necesita?
+		
 		1.	Información personal del cliente
 		2.	Información personal del barbero
 		3.	Servicios que ofrecen los barberos
@@ -43,6 +47,7 @@
 		5.	Ubicación de las barberías
 
 	o	¿Cuáles son las principales entidades?
+		
 		1.	Cliente
 		2.	Barbero
 		3.	Barbería
@@ -50,6 +55,7 @@
 		5.	Cita
 
 	o	¿Qué características tiene cada entidad?
+		
 		1.	Cliente
 			1.	ID, Nombre, Teléfono, Correo, Género, Usuario y Contraseña.
 		2.	Barbero
@@ -62,6 +68,7 @@
 			1.	ID, Número de cita, Cliente, Barbería, Servicios, Fecha y Hora.
 
 	o	¿Qué funcionalidades tiene cada entidad?
+		
 		1.	Cliente
 			1.	Crear su usuario.
 			2.	Consultar usuarios.
@@ -110,6 +117,7 @@
 - 3.Utilicen historias de usuario para ayudarte a responder las preguntas del inciso anterior:
 
 	Cliente:
+		
 		o	Como cliente quiero crear mi usuario para usar el sistema.
 		o	Como cliente quiero consultar mis datos para verificarlos.
 		o	Como cliente quiero modificar mis datos para corregirlos.
@@ -122,6 +130,7 @@
 		o	Como cliente quiero consultar servicios para elegir algunos.
 
 	Barbero:
+		
 		o	Como barbero quiero crear mi usuario para usar el sistema.
 		o	Como barbero quiero consultar mis datos para verificarlos.
 		o	Como barbero quiero modificar mis datos para corregirlos.
